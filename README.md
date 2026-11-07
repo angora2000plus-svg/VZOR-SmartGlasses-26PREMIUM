@@ -1,15 +1,20 @@
-# VZOR-SmartGlasses-26PREMIUM 👓💎
-Очки с Дельта-архитектурой - выглядят охренительно!
+# VZOR-SmartGlasses-26PREMIUM 👓
 
-## Что внутри
-- **Delta Architecture** - анти-рекурсивный декоратор для задач
-- `vzor-core/skills` - ядро навыков
-- Премиум дизайн 2026
+Premium Smart Glasses with Delta Architecture.
 
-## Ссылки
-- Главный проект: https://angora2000plus-svg.github.io/vzors-ai/
-- Технология: анти-рекурсивный декоратор, защита от зацикливания
+### Features
+- **Delta Architecture** — anti-recursive decorator for tasks, prevents infinite loops
+- `vzor-core/skills` — core skills engine
+- Premium design 2026 — looks fucking amazing
 
-## Установка
+### Links
+- Main Project: https://angora2000plus-svg.github.io/vzors-ai/
+- Live Demo: https://angora2000plus-svg.github.io/VZOR-SmartGlasses-26PREMIUM/
+
+### Tech Stack
+- Python anti-recursive decorator
+- VZOR AI Clarity Vision
+
+### Install
 ```bash
 git clone https://github.com/angora2000plus-svg/VZOR-SmartGlasses-26PREMIUM
