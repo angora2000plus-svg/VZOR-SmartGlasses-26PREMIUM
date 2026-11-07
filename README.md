@@ -1,60 +1,15 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vzors AI - Clarity Vision</title>
-<style>
-body{margin:0;padding:24px;background:#f8f7ff;font-family:-apple-system,Inter,Segoe UI,sans-serif}
-.header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
-.star-img{width:64px;height:64px;object-fit:contain;background:white;border-radius:16px;border:1px solid #e9e3ff;padding:6px;box-shadow:0 2px 12px rgba(90,40,255,0.08)}
-.top-title{font-size:32px;font-weight:800;letter-spacing:0.12em;color:#7d8fb0}
-.top-title span{display:block;font-size:12px;letter-spacing:0.25em;font-weight:600;color:#1a2340;margin-top:2px}
-.top-models{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}
-.model{background:white;border:1px solid #e9e3ff;border-radius:14px;padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;min-width:130px}
-.model:hover{background:#f3f0ff;transform:translateY(-1px);box-shadow:0 4px 12px rgba(120,80,255,0.12)}
-.model .ico{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
-.card{background:white;border:1px solid #e9e3ff;border-radius:16px;padding:16px;margin-top:14px}
-.card.amethyst{background:#faf8ff}
-textarea{width:100%;border:1px solid #e9e3ff;border-radius:12px;padding:12px;box-sizing:border-box;min-height:70px;background:#faf8ff}
-button{background:#111;color:#fff;border:0;border-radius:999px;padding:10px 18px;cursor:pointer;font-weight:600}
-button.sec{background:white;color:#111;border:1px solid #e9e3ff}
-#list{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
-.note{background:#fffbe6;border:1px solid #f0e6b0;border-radius:12px;padding:12px;min-width:120px;max-width:220px}
-</style>
-</head>
-<body>
-<div class="header">
-<img class="star-img" src="star.png" alt="VZOR AI Star">
-<div class="top-title">VZOR AI<span>Clarity Vision</span></div>
-</div>
+# VZOR-SmartGlasses-26PREMIUM 👓💎
+Очки с Дельта-архитектурой - выглядят охренительно!
 
-<div class="top-models">
-<div class="model" onclick="window.open('https://www.meta.ai','_blank')"><div class="ico" style="background:#e6f0ff;color:#0064ff">∞</div><div><b>Meta</b><br><small>Spark</small></div></div>
-<div class="model" onclick="window.open('https://chat.openai.com','_blank')"><div class="ico" style="background:#111;color:#fff">GPT</div><div><b>Astra G56</b><br><small>GPT-6</small></div></div>
-<div class="model" onclick="window.open('https://gemini.google.com','_blank')"><div class="ico" style="background:linear-gradient(135deg,#4285f4,#ea4335,#fbbc05,#34a853);color:white">◆</div><div><b>Gemini</b><br><small>Google</small></div></div>
-<div class="model" onclick="window.open('https://claude.ai','_blank')"><div class="ico" style="background:#fff1e6;color:#d45500">✿</div><div><b>Claude</b><br><small>Anthropic</small></div></div>
+## Что внутри
+- **Delta Architecture** - анти-рекурсивный декоратор для задач
+- `vzor-core/skills` - ядро навыков
+- Премиум дизайн 2026
 
-<div class="model" onclick="window.open('https://www.yr.no/en/forecast/daily-table/Latvia/Riga/Riga','_blank')"><div class="ico" style="background:#e6f7ff;color:#0090ff">☁️</div><div><b>Laiks</b><br><small>Weather</small></div></div>
-<div class="model" onclick="alert('12 ❤️ Patīk!')"><div class="ico" style="background:#ffe6ef;color:#ff2d6b">♥</div><div><b>Patīk</b><br><small>Like</small></div></div>
-<div class="model" onclick="window.open('https://www.dynas.lv','_blank')"><div class="ico" style="background:#fffbe6;color:#b89a00">◍</div><div><b>Dynas</b><br><small>Shop</small></div></div>
-<div class="model" onclick="window.open('https://www.delfi.lv/horoskopi','_blank')"><div class="ico" style="background:#f3e6ff;color:#7a3cff">♌</div><div><b>Horoskops</b><br><small>Zodiac</small></div></div>
+## Ссылки
+- Главный проект: https://angora2000plus-svg.github.io/vzors-ai/
+- Технология: анти-рекурсивный декоратор, защита от зацикливания
 
-<div class="model" onclick="window.open('https://angora2000plus-svg.github.io/VZOR-SmartGlasses-26PREMIUM/','_blank')"><div class="ico" style="background:#111;color:#a8ff60">◐</div><div><b>Glasses</b><br><small>Delta PREMIUM</small></div></div>
-</div>
-
-<div class="card">
-<textarea id="t" placeholder="Raksti vai nodiktē..."></textarea><br><br>
-<button id="b" onclick="mic()">🎤 Nodiktēt</button>
-<button class="sec" onclick="save()">+ Lapiņa</button>
-<div id="list"></div>
-</div>
-
-<script>
-function render(){let a=JSON.parse(localStorage.getItem('v')||'[]');let l=document.getElementById('list');l.innerHTML='';a.forEach((x,i)=>{let d=document.createElement('div');d.className='note';d.textContent=x;d.onclick=()=>{a.splice(i,1);localStorage.setItem('v',JSON.stringify(a));render()};l.appendChild(d)})}
-function save(){let v=document.getElementById('t').value.trim();if(!v)return;let a=JSON.parse(localStorage.getItem('v')||'[]');a.unshift(v);localStorage.setItem('v',JSON.stringify(a));document.getElementById('t').value='';render()}
-function mic(){let R=window.SpeechRecognition||window.webkitSpeechRecognition;if(!R){alert('Pārlūks neatbalsta mikrofonu');return}let r=new R();r.lang='lv-LV';r.onstart=()=>document.getElementById('b').innerText='🔴 Klausos';r.onend=()=>document.getElementById('b').innerText='🎤 Nodiktēt';r.onresult=e=>document.getElementById('t').value=e.results[0][0].transcript;r.start()}
-render()
-</script>
-</body>
-</html>
+## Установка
+```bash
+git clone https://github.com/angora2000plus-svg/VZOR-SmartGlasses-26PREMIUM
