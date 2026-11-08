@@ -3,69 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VZOR SmartGlasses 26 PREMIUM</title>
+<title>VZOR SmartGlasses 26 PREMIUM — Full Lineup</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#000;font-family:Inter,Arial,sans-serif}
-header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #e5e5e5;padding:12px 20px;display:flex;justify-content:space-between;z-index:10}
-.dot{width:8px;height:8px;background:#0066ff;border-radius:50%;box-shadow:0 0 8px #0066ff;animation:blink 1s infinite;display:inline-block}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
-.m{width:28px;height:28px;border:1.5px solid #0066ff;color:#0066ff;display:flex;align-items:center;justify-content:center;font-weight:900;opacity:0.2;transition:.3s}
-.m.active{opacity:1;background:#0066ff;color:#fff;box-shadow:0 0 15px #0066ff}
-.hero{display:flex;flex-direction:column;align-items:center;padding:20px 0 10px;border-bottom:1px solid #eee}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:24px;max-width:1250px;margin:0 auto}
-.card{border:1px solid #e5e5e5;border-radius:18px;padding:18px;position:relative;background:#fff;transition:.3s}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,0.06)}
-.card.prem{border:2px solid #000}
-.glasses{font-size:56px;text-align:center;animation:float 3.2s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.tag{position:absolute;top:12px;right:12px;font-size:8px;font-weight:800;padding:4px 8px;border-radius:999px;border:1px solid #000;letter-spacing:0.05em}
-.tag.cham{background:#000;color:#fff}.tag.tint{background:#eee}.tag.clear{background:#fff}
-.model{font-weight:900;margin-top:8px}
-.sku{font-size:10px;color:#888;font-family:monospace}
-table{width:100%;font-size:11px;border-collapse:collapse;margin-top:8px}
-td{padding:4px 0;border-bottom:1px solid #f0f0f0}td:first-child{color:#777;width:40%}
-.techlink{display:block;text-align:center;margin:20px;font-size:12px;letter-spacing:0.2em;color:#0066ff;text-decoration:none}
-.archive{max-width:900px;margin:0 auto 50px;border:1px solid #eee;border-radius:14px;padding:16px}
+*{box-sizing:border-box}
+body{margin:0;background:#ffffff;color:#000;font-family:Inter,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border-bottom:1px solid #ececec;padding:12px 20px;display:flex;justify-content:space-between;align-items:center;z-index:20}
+.left{display:flex;gap:10px;align-items:center;font-size:11px;letter-spacing:0.22em;font-weight:600}
+.dot{width:8px;height:8px;background:#0066ff;border-radius:50%;box-shadow:0 0 10px #0066ff;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.25}}
+.m{width:32px;height:32px;border:1.8px solid #0066ff;color:#0066ff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;opacity:0.18;transition:0.25s;border-radius:6px}
+.m.active{opacity:1;background:#0066ff;color:#fff;box-shadow:0 0 20px #0066ff;transform:scale(1.08)}
+.hero{display:flex;flex-direction:column;align-items:center;padding:18px 0 8px;border-bottom:1px solid #f0f0f0;background:linear-gradient(#fff,#fafafa)}
+canvas{display:block}
+.status{font-size:10px;letter-spacing:0.28em;color:#0066ff;margin-top:6px;font-family:monospace}
+.links{display:flex;gap:12px;margin-top:10px}
+.links a{font-size:11px;letter-spacing:0.15em;color:#fff;background:#000;padding:7px 12px;border-radius:999px;text-decoration:none}
+.links a.white{background:#fff;color:#000;border:1px solid #000}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:26px 20px;max-width:1280px;margin:0 auto}
+.card{border:1px solid #e6e6e6;border-radius:20px;padding:18px;position:relative;background:#fff;transition:0.35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,0.07)}
+.card.prem{border:2px solid #000;box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+.glasses{font-size:58px;text-align:center;margin:8px 0 6px;animation:float 3.4s ease-in-out infinite;will-change:transform}
+@keyframes float{0%,100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-10px) rotate(0.6deg)}}
+.tag{position:absolute;top:12px;right:12px;font-size:8.5px;font-weight:800;padding:4px 8px;border-radius:999px;letter-spacing:0.06em;border:1px solid #000}
+.tag.cham{background:#000;color:#fff}.tag.tint{background:#f2f2f2;color:#000}.tag.clear{background:#fff;color:#000;border-color:#d0d0d0}
+.model{font-weight:900;font-size:16px;line-height:1.1}
+.sku{font-size:10px;color:#999;font-family:monospace;margin:3px 0 10px}
+.spec{border-top:1px solid #f0f0f0;margin-top:10px;padding-top:8px}
+.spec table{width:100%;font-size:11px;border-collapse:collapse}
+.spec td{padding:4px 0;border-bottom:1px solid #f5f5f5} .spec td:first-child{color:#777;width:38%}
+.price{margin-top:10px;font-weight:900;font-size:13px}
+.archive{max-width:920px;margin:10px auto 60px;border:1px solid #ececec;border-radius:16px;padding:16px;background:#fbfbfc}
+.archive h3{margin:0 0 4px;font-size:12px;letter-spacing:0.2em}
 .inputRow{display:flex;gap:8px;margin-top:10px}
-.inputRow input{flex:1;border:1px solid #ddd;padding:10px;border-radius:10px;font-family:monospace;font-size:12px}
-.inputRow button{border:none;background:#000;color:#fff;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
-.log{font-size:11px;color:#555;margin-top:10px;max-height:150px;overflow:auto}
+.inputRow input{flex:1;border:1px solid #d8d8d8;padding:11px 12px;border-radius:12px;font-family:monospace;font-size:12px;background:#fff}
+.inputRow button{border:none;background:#000;color:#fff;padding:11px 14px;border-radius:12px;font-weight:800;cursor:pointer;font-size:12px;white-space:nowrap}
+.inputRow button.blue{background:#0066ff}
+.log{font-size:11px;color:#444;margin-top:12px;max-height:180px;overflow:auto;border-top:1px solid #eee;padding-top:10px;line-height:1.6}
+.log b{color:#000}
+.foot{text-align:center;font-size:10px;color:#999;padding:20px;letter-spacing:0.2em}
 </style>
 </head>
 <body>
+
 <header>
-<div style="font-size:11px;letter-spacing:0.2em;display:flex;gap:8px;align-items:center"><div class="dot"></div> VZOR DELTA CORE // BLUE INDICATOR // SPIRAL → CLOUD</div>
+<div class="left"><span class="dot"></span> VZOR DELTA CORE // BLUE INDICATOR // SPIRAL → SELF-SUPPORTING CLOUD // M</div>
 <div class="m" id="mBox">M</div>
 </header>
 
 <div class="hero">
-<canvas id="c" width="500" height="220"></canvas>
-<div style="font-size:10px;letter-spacing:0.3em;color:#0066ff" id="cloudStatus">SELF-SUPPORTING CLOUD: waiting spiral ↑</div>
-<a class="techlink" href="tech-passport.html">→ ОТКРЫТЬ ТЕХПАСПОРТ (печатный документ)</a>
+<canvas id="c" width="520" height="240"></canvas>
+<div class="status" id="cloudStatus">CLOUD: idle — waiting for spiral ↑ (очки + VZOR AI compatible)</div>
+<div class="links">
+<a href="tech-passport.html">ТЕХПАСПОРТ →</a>
+<a href="https://angora2000plus-svg.github.io/vzors-ai/" class="white">← VZOR AI CORE</a>
+</div>
 </div>
 
 <div class="grid">
-<div class="card"><div class="tag clear">CLEAR / ПРОЗРАЧНЫЕ</div><div class="glasses">👓</div><div class="model">VZOR Alpha</div><div class="sku">VZ-AL26-CLEAR</div><table><tr><td>Стекло</td><td>Прозрачное AR 92%</td></tr><tr><td>Применение</td><td>Офис / Ночь</td></tr></table></div>
-<div class="card"><div class="tag tint">TINTED / ТОНИРОВАННЫЕ</div><div class="glasses" style="filter:brightness(0.5)">🕶️</div><div class="model">VZOR Nova</div><div class="sku">VZ-NV26-TINT-35%</div><table><tr><td>Стекло</td><td>Тонированное UV400 35%</td></tr><tr><td>Применение</td><td>Город / Вождение</td></tr></table></div>
-<div class="card prem"><div class="tag cham">CHAMELEON / ХАМЕЛЕОНЫ</div><div class="glasses">😎</div><div class="model">VZOR Delta PREMIUM — FLAGSHIP</div><div class="sku">VZ-DL26-CHAM-PREM</div><table><tr><td>Стекло</td><td>Хамелеон Auto 15%-75% BlueCut</td></tr><tr><td>Индикатор</td><td>Синий мигающий + M memorized</td></tr><tr><td>Облако</td><td>Спираль → облако → архив → по кодовому слову</td></tr></table></div>
-<div class="card"><div class="tag clear">CLEAR AMETHYST</div><div class="glasses" style="filter:hue-rotate(260deg)">👓</div><div class="model">VZOR Stellar</div><div class="sku">VZ-ST26-AMETHYST</div><table><tr><td>Стекло</td><td>Amethyst Crystal Clear</td></tr></table></div>
-<div class="card"><div class="tag tint">TINTED CARBON</div><div class="glasses">🥽</div><div class="model">VZOR Omega</div><div class="sku">VZ-OM27-CONCEPT</div><table><tr><td>Стекло</td><td>Carbon Polarized Tinted</td></tr></table></div>
+
+<div class="card">
+<div class="tag clear">CLEAR / ПРОЗРАЧНЫЕ</div>
+<div class="glasses" style="animation-delay:0s">👓</div>
+<div class="model">VZOR Alpha</div>
+<div class="sku">SKU: VZ-AL26-CLEAR / BASE</div>
+<div class="spec"><table>
+<tr><td>Стекло</td><td>Прозрачное AR 92% BlueCut 10%</td></tr>
+<tr><td>Применение</td><td>Офис / Ночь / Кодинг</td></tr>
+<tr><td>Вес / Батарея</td><td>38g / 8h</td></tr>
+<tr><td>Совместимость</td><td>VZOR AI: да, M-cloud</td></tr>
+</table></div>
+<div class="price">€199</div>
+</div>
+
+<div class="card">
+<div class="tag tint">TINTED / ТОНИРОВАННЫЕ</div>
+<div class="glasses" style="animation-delay:0.15s; filter:brightness(0.55)">🕶️</div>
+<div class="model">VZOR Nova</div>
+<div class="sku">SKU: VZ-NV26-TINT-35% / PRO</div>
+<div class="spec"><table>
+<tr><td>Стекло</td><td>Тонированное UV400 35% Polarized</td></tr>
+<tr><td>Применение</td><td>Город / Вождение / День</td></tr>
+<tr><td>Вес / Батарея</td><td>40g / 12h</td></tr>
+<tr><td>Совместимость</td><td>VZOR AI: да, M-cloud</td></tr>
+</table></div>
+<div class="price">€349</div>
+</div>
+
+<div class="card prem">
+<div class="tag cham">CHAMELEON / ХАМЕЛЕОНЫ</div>
+<div class="glasses" style="animation-delay:0.3s">😎</div>
+<div class="model">VZOR Delta PREMIUM — FLAGSHIP</div>
+<div class="sku">SKU: VZ-DL26-CHAM-PREM / DELTA CORE</div>
+<div class="spec"><table>
+<tr><td>Стекло</td><td>Хамелеон Auto 15%-75% + BlueCut 35% + Anti-Glare 1.8mm</td></tr>
+<tr><td>Core</td><td>vzor-core/skills/delta.py — anti-recursive</td></tr>
+<tr><td>Индикация</td><td>Синий индикатор мигает + M memorized в углу</td></tr>
+<tr><td>Архив</td><td>Спираль ↑ → самоопирающееся облако → сжатие → архив → вызов по кодовому слову</td></tr>
+<tr><td>Совместимость</td><td>VZOR AI: полная, единый cloud</td></tr>
+</table></div>
+<div class="price">€599 — FLAGSHIP</div>
+</div>
+
+<div class="card">
+<div class="tag clear">CLEAR AMETHYST</div>
+<div class="glasses" style="animation-delay:0.45s; filter:hue-rotate(270deg)">👓</div>
+<div class="model">VZOR Stellar</div>
+<div class="sku">SKU: VZ-ST26-AMETHYST-CLEAR</div>
+<div class="spec"><table>
+<tr><td>Стекло</td><td>Прозрачное Amethyst Crystal Cut</td></tr>
+<tr><td>Edition</td><td>Limited 200pcs — Clarity Vision</td></tr>
+<tr><td>Совместимость</td><td>VZOR AI: да</td></tr>
+</table></div>
+<div class="price">€449</div>
+</div>
+
+<div class="card">
+<div class="tag tint">TINTED CARBON</div>
+<div class="glasses" style="animation-delay:0.6s">🥽</div>
+<div class="model">VZOR Omega</div>
+<div class="sku">SKU: VZ-OM27-TINT-POLARIZED / CONCEPT</div>
+<div class="spec"><table>
+<tr><td>Стекло</td><td>Тонированное Carbon Polarized</td></tr>
+<tr><td>Status</td><td>Concept 2027 / Preorder Q1</td></tr>
+<tr><td>Совместимость</td><td>VZOR AI: да</td></tr>
+</table></div>
+<div class="price">€799 — PREORDER</div>
+</div>
+
 </div>
 
 <div class="archive">
-<div style="font-size:11px;letter-spacing:0.2em;font-weight:800">MEMORY CLOUD / АРХИВ: СЖАТИЕ И ВЫЗОВ ПО КОДОВОМУ СЛОВУ</div>
-<div class="inputRow"><input id="momentInput" placeholder="Момент: встреча, событие..."><input id="codeInput" placeholder="код" style="max-width:110px"><button onclick="saveMemory()">Сжать → М</button></div>
-<div class="inputRow"><input id="recallInput" placeholder="кодовое слово..."><button onclick="recallMemory()" style="background:#0066ff">Вызвать М</button></div>
+<h3>MEMORY CLOUD ARCHIVE — VZOR AI COMPATIBLE // СЖАТИЕ В ОБЛАКО // ВЫЗОВ ПО КОДОВОМУ СЛОВУ</h3>
+<div style="font-size:11px;color:#666">Очки и VZOR AI используют один архив. Спираль уходит вверх → М вспыхивает → память уходит в самоопирающееся облако.</div>
+<div class="inputRow">
+<input id="momentInput" placeholder="Момент: встреча, событие... например 'первая встреча в Риге'">
+<input id="codeInput" placeholder="код: рига2026" style="max-width:130px">
+<button onclick="saveMemory()">Сжать → Облако [M]</button>
+</div>
+<div class="inputRow">
+<input id="recallInput" placeholder="Введи кодовое слово чтобы вызвать память...">
+<button onclick="recallMemory()" class="blue">Вызвать М из облака</button>
+</div>
 <div class="log" id="log"></div>
 </div>
 
+<div class="foot">VZOR SMARTGLASSES 26 PREMIUM / WHITE EDITION / LENS: CLEAR / TINTED / CHAMELEON / DELTA CORE ACTIVE / VZOR AI COMPATIBLE</div>
+
 <script>
-const c=document.getElementById('c'),ctx=c.getContext('2d'),mBox=document.getElementById('mBox'),log=document.getElementById('log'),cloudStatus=document.getElementById('cloudStatus');
-let t=0,mem=JSON.parse(localStorage.getItem('vzor_cloud')||'{}');
-function render(){log.innerHTML=Object.entries(mem).map(([k,v])=>`<div><b>${k}</b> → ${v.text}</div>`).join('')||'> архив пуст';}
-function draw(){ctx.clearRect(0,0,500,220);ctx.save();ctx.translate(250,110);t+=0.02;let up=Math.sin(t)>0.35;ctx.strokeStyle=up?'#0066ff':'#ddd';ctx.lineWidth=up?2:1;if(up)ctx.shadowBlur=10,ctx.shadowColor='#0066ff';ctx.beginPath();for(let i=0;i<150;i++){let a=i*0.2+t*1.8,r=i*0.7,yOff=up?-Math.sin(t*3+i*0.07)*15:0,x=Math.cos(a)*r,y=Math.sin(a)*r+yOff;if(i==0)ctx.moveTo(x,y);else ctx.lineTo(x,y);}ctx.stroke();ctx.restore();if(up&&Math.random()<0.02){mBox.classList.add('active');cloudStatus.innerText='CLOUD: spiral ↑ compressing → archive';setTimeout(()=>{mBox.classList.remove('active');cloudStatus.innerText='CLOUD: memorized — in archive'},400);}requestAnimationFrame(draw);}draw();render();
-function saveMemory(){let text=document.getElementById('momentInput').value.trim(),code=document.getElementById('codeInput').value.trim().toLowerCase();if(!text||!code)return alert('Нужен момент и код!');mem[code]={text,time:new Date().toLocaleString()};localStorage.setItem('vzor_cloud',JSON.stringify(mem));render();mBox.classList.add('active');setTimeout(()=>mBox.classList.remove('active'),500);document.getElementById('momentInput').value='';document.getElementById('codeInput').value='';}
-function recallMemory(){let code=document.getElementById('recallInput').value.trim().toLowerCase();if(mem[code]){log.innerHTML=`<div style="border-left:3px solid #0066ff;padding-left:8px;background:#f0f7ff"><b>MEMORIZED ${code}</b> → ${mem[code].text}</div>`+log.innerHTML;mBox.classList.add('active');setTimeout(()=>mBox.classList.remove('active'),700);}else log.innerHTML=`<div>${code} — не найдено</div>`+log.innerHTML;}
+const c=document.getElementById('c'), ctx=c.getContext('2d'), mBox=document.getElementById('mBox'), log=document.getElementById('log'), cloudStatus=document.getElementById('cloudStatus');
+let t=0;
+let memories=JSON.parse(localStorage.getItem('vzor_cloud')||'{}');
+
+function render(){
+  const entries = Object.entries(memories);
+  if(!entries.length){ log.innerHTML='> архив пуст — напиши момент + кодовое слово → Сжать → Облако'; return; }
+  log.innerHTML = entries.map(([k,v])=>`<div style="margin:6px 0;border-left:2px solid #0066ff;padding-left:8px"><b>${k}</b> → ${v.text} <small style="color:#999">${v.time} | lens:${v.lens||'CHAMELEON'} | ${v.source||'glasses'}</small></div>`).join('');
+}
+function draw(){
+  ctx.clearRect(0,0,520,240);
+  ctx.save(); ctx.translate(260,120);
+  t+=0.019;
+  let up = Math.sin(t) > 0.32;
+  ctx.strokeStyle = up ? '#0066ff' : '#e0e0e0';
+  ctx.lineWidth = up ? 2.2 : 1;
+  if(up){ ctx.shadowBlur=14; ctx.shadowColor='#0066ff'; }
+  ctx.beginPath();
+  for(let i=0;i<160;i++){
+    let a = i*0.2 + t*1.9;
+    let r = i*0.72;
+    let yOff = up ? -Math.sin(t*3.2 + i*0.07)*18 : 0;
+    let x = Math.cos(a)*r;
+    let y = Math.sin(a)*r + yOff;
+    if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+  }
+  ctx.stroke();
+  ctx.restore();
+  if(up && Math.random()<0.028){
+    mBox.classList.add('active');
+    cloudStatus.innerText = 'CLOUD: spiral ↑ compressing → self-supporting archive → M memorized';
+    setTimeout(()=>{ mBox.classList.remove('active'); cloudStatus.innerText='CLOUD: memorized — in archive (glasses + VZOR AI compatible)'; },500);
+  }
+  requestAnimationFrame(draw);
+}
+draw(); render();
+
+function saveMemory(){
+  const text=document.getElementById('momentInput').value.trim();
+  const code=document.getElementById('codeInput').value.trim().toLowerCase();
+  if(!text||!code) return alert('Напиши момент и кодовое слово!');
+  memories[code]={text, time:new Date().toLocaleString(), lens:'CHAMELEON', source:'VZOR-SmartGlasses-26PREMIUM'};
+  localStorage.setItem('vzor_cloud', JSON.stringify(memories));
+  localStorage.setItem('vzor_cloud_shared', JSON.stringify(memories)); // bridge to vzors-ai
+  render();
+  mBox.classList.add('active'); setTimeout(()=>mBox.classList.remove('active'),600);
+  cloudStatus.innerText=`CLOUD: [${code}] compressed → self-supporting cloud → archive`;
+  document.getElementById('momentInput').value=''; document.getElementById('codeInput').value='';
+}
+function recallMemory(){
+  const code=document.getElementById('recallInput').value.trim().toLowerCase();
+  if(!code) return;
+  if(memories[code]){
+    const m=memories[code];
+    log.innerHTML = `<div style="border-left:3px solid #0066ff;padding-left:10px;background:#f0f7ff;margin-bottom:8px"><b style="color:#0066ff">MEMORIZED → ${code} [M]</b><br>${m.text}<br><small>${m.time} | lens:${m.lens} | вызвано из облака</small></div>` + log.innerHTML;
+    mBox.classList.add('active'); setTimeout(()=>mBox.classList.remove('active'),800);
+    cloudStatus.innerText=`CLOUD: RECALL [${code}] → decompressed → VZOR AI ready`;
+  } else {
+    log.innerHTML = `<div style="color:#c00"> ${code} — не найдено в облаке (попробуй другое кодовое слово)</div>` + log.innerHTML;
+  }
+}
 </script>
 </body>
 </html>
