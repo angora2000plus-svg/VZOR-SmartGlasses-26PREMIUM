@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>VZOR - Техпаспорт</title>
+<style>
+body{margin:0;background:#fff;color:#000;font-family:monospace;padding:40px}
+.page{max-width:800px;margin:0 auto;border:2px solid #000;padding:30px}
+.h{border-bottom:3px double #000;padding-bottom:15px;margin-bottom:20px;display:flex;justify-content:space-between}
+.h b{font-size:18px}
+.stamp{border:2px solid #000;padding:4px 10px;transform:rotate(-3deg);font-size:10px;font-weight:900}
+h2{font-size:14px;background:#000;color:#fff;padding:6px 10px;display:inline-block}
+table{width:100%;border-collapse:collapse;margin:10px 0 20px;font-size:12px}
+td{border:1px solid #000;padding:8px}
+td:first-child{width:40%;background:#f5f5f5;font-weight:700}
+.note{border:1px dashed #000;padding:10px;font-size:11px;margin-top:20px}
+.m-box{float:right;width:40px;height:40px;border:2px solid #0066ff;color:#0066ff;display:flex;align-items:center;justify-content:center;font-weight:900}
+.blue{color:#0066ff}
+</style>
+</head>
+<body>
+
+<div class="page">
+<div class="h">
+<div><b>VZOR SMARTGLASSES</b><br>ТЕХНИЧЕСКИЙ ПАСПОРТ ИЗДЕЛИЯ<br>26 PREMIUM COLLECTION / DELTA ARCHITECTURE</div>
+<div class="stamp">DELTA<br>PREMIUM<br>✓ VERIFIED</div>
+</div>
+
+<div class="m-box" id="mBox">M</div>
+<div style="font-size:11px"><span style="display:inline-block;width:10px;height:10px;background:#0066ff;border-radius:50%;box-shadow:0 0 8px #0066ff"></span> СИНИЙ ИНДИКАТОР: АКТИВЕН // СПИРАЛЬ → САМООПИРАЮЩЕЕСЯ ОБЛАКО</div>
+
+<h2>1. ЛИНЕЙКА СТЕКОЛ / LENS LINEUP</h2>
+<table>
+<tr><td>Тип 1 - CLEAR / Прозрачные</td><td>AR 92%, BlueCut 10%, для ночи/офиса/кодинга. Не искажает цвет. Модели: Alpha, Stellar</td></tr>
+<tr><td>Тип 2 - TINTED / Тонированные</td><td>UV400 35% Polarized, затемнение фиксированное 35%. Для города/вождения/дня. Модели: Nova, Omega</td></tr>
+<tr><td>Тип 3 - CHAMELEON / Хамелеоны</td><td>Auto 15%-75% + BlueCut 35%, фотохром, адаптируется за 8 сек. Флагман Delta PREMIUM</td></tr>
+</table>
+
+<h2>2. ФЛАГМАН - VZOR DELTA PREMIUM (SKU: VZ-DL26-CHAM-PREM)</h2>
+<table>
+<tr><td>Процессор</td><td>VZOR-Delta Core X1 + Anti-Recursive Decorator (vzor-core/skills/delta.py)</td></tr>
+<tr><td>ОЗУ / ПЗУ</td><td>8GB LPDDR5 + 128GB + M-Cloud Archive</td></tr>
+<tr><td>Стекло</td><td>Хамелеон Auto 15%-75%, BlueCut, Anti-Glare, толщина 1.8mm</td></tr>
+<tr><td>Батарея</td><td>18h + wireless charging case (24h)</td></tr>
+<tr><td>Вес</td><td>42g Carbon + Titanium</td></tr>
+<tr><td>Защита</td><td>IP67, Mil-Spec 810H</td></tr>
+<tr><td>Индикация</td><td>Синий индикатор (мигает) + буква М (memorized) в углу</td></tr>
+<tr><td>Архитектура памяти</td><td>Спираль уходит вверх → самоопирающееся облако → сжатие в архив → вызов по кодовому слову</td></tr>
+</table>
+
+<h2>3. АРХИВ ПАМЯТИ / MEMORY CLOUD</h2>
+<table>
+<tr><td>Принцип</td><td>Момент/встреча/событие → кодовое слово → сжатие (btoa) → self-supporting cloud (localStorage + delta.py) → архив</td></tr>
+<tr><td>Вызов</td><td>Ввод кодового слова → decompress → MEMORIZED → M вспыхивает</td></tr>
+<tr><td>Пример</td><td>Момент: "Первая встреча в Риге" + код: "рига2026" → в облако → вызов: "рига2026" → воспоминание восстановлено</td></tr>
+<tr><td>Защита от рекурсии</td><td>Anti-recursive decorator — не дает зациклить воспоминание</td></tr>
+</table>
+
+<h2>4. ПОЛНАЯ ЛИНЕЙКА</h2>
+<table>
+<tr><td>VZOR Alpha - CLEAR</td><td>€199 / 38g / C1 / Прозрачные / Офис</td></tr>
+<tr><td>VZOR Nova - TINTED</td><td>€349 / 40g / C2 AI / Тонированные 35% / Город</td></tr>
+<tr><td>VZOR Delta PREMIUM - CHAMELEON</td><td>€599 / 42g / Delta X1 / Хамелеоны 15-75% / Флагман + M-cloud</td></tr>
+<tr><td>VZOR Stellar - CLEAR Amethyst</td><td>€449 / 41g / C2 / Прозрачные Amethyst Crystal / Limited 200pcs</td></tr>
+<tr><td>VZOR Omega - TINTED</td><td>€799 / 45g / X Future / Тонированные Carbon Polarized / Concept 2027</td></tr>
+</table>
+
+<div class="note">
+<b>ПЕЧАТЬ ОТК:</b> Изделие прошло проверку Delta Core. Спираль → облако → архив — работает. Синий индикатор мигает, М memorized вспыхивает при уходе спирали вверх. Стекла: прозрачные, тонированные, хамелеоны — соответствуют заявленным.<br><br>
+Дата: 08.11.2026 | Подпись: VZOR DELTA ARCHITECTURE | Код: vzor-core/skills/delta.py<br>
+Сайт: https://angora2000plus-svg.github.io/VZOR-SmartGlasses-26PREMIUM/
+</div>
+
+</div>
+
+</body>
+</html>
